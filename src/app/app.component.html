@@ -2,7 +2,11 @@
   <div class="seconddiv">
     <h1>Interview Project</h1>
     <ul class="ulListStyle">
-      <li *ngFor="let notes of myObjArray" class="listyle">
+      <li
+        *ngFor="let notes of myObjArray"
+        class="listyle"
+        (click)="deleteitem()"
+      >
         <span>{{ notes.name }}</span>
         <span style="float: right;">{{ notes.date }}</span
         ><br />
@@ -27,5 +31,8 @@
       <br />
       <button (click)="AddNotes()">Add</button>
     </div>
+    <p style="color:red;">
+      {{ errorMessage }}
+    </p>
   </div>
 </div>

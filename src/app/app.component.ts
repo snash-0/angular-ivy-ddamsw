@@ -13,6 +13,7 @@ export class AppComponent {
   inputTextField = '';
   errorMessage = '';
 
+  id = 1;
   members: string[] = [];
 
   myObjArray = [
@@ -44,6 +45,7 @@ export class AppComponent {
     //this.inputTextField
     //);
     if (!this.inputNameField) {
+      this.errorMessage = 'please fill the fields';
       return;
     } else {
       this.myObjArray.push({
@@ -53,4 +55,5 @@ export class AppComponent {
       });
     }
   }
+  deleteitem() {}
 }
