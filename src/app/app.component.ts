@@ -11,6 +11,7 @@ export class AppComponent {
   inputNameField = '';
   inputeDateField: Date = null;
   inputTextField = '';
+  errorMessage = '';
 
   members: string[] = [];
 
@@ -42,12 +43,14 @@ export class AppComponent {
     //' + ' +
     //this.inputTextField
     //);
-    this.myObjArray.push({
-      name: this.inputNameField,
-      date: this.inputeDateField,
-      Text: this.inputTextField,
-    });
-    
-    //console.log(this.myObjArray);
+    if (!this.inputNameField) {
+      return;
+    } else {
+      this.myObjArray.push({
+        name: this.inputNameField,
+        date: this.inputeDateField,
+        Text: this.inputTextField,
+      });
+    }
   }
 }

@@ -17,18 +17,12 @@
         (input)="addInputName(inputName.value)"
         [value]="inputNameField"
       />
-      <input
-        type="date"
-        #inputDate
-        (input)="addInputDate(inputDate.value)"
-        [value]="inputeDateField"
-      />
+      <input type="date" #inputDate (input)="addInputDate(inputDate.value)" />
       <input
         type="text"
         placeholder="Description"
         #inputText
         (input)="addInputText(inputText.value)"
-        [value]="inputTextField"
       />
       <br />
       <button (click)="AddNotes()">Add</button>
