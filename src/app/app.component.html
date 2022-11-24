@@ -1,2 +1,37 @@
-<hello name="{{ name }}"></hello>
-<p>Start editing to see some magic happen :)</p>
+<div class="fulldiv">
+  <div class="seconddiv">
+    <h1>Interview Project</h1>
+    <ul class="ulListStyle">
+      <li *ngFor="let notes of myObjArray" class="listyle">
+        <span>{{ notes.name }}</span>
+        <span style="float: right;">{{ notes.date }}</span
+        ><br />
+        <span>{{ notes.Text }}</span>
+      </li>
+    </ul>
+    <div>
+      <input
+        type="text"
+        placeholder="Name"
+        #inputName
+        (input)="addInputName(inputName.value)"
+        [value]="inputNameField"
+      />
+      <input
+        type="date"
+        #inputDate
+        (input)="addInputDate(inputDate.value)"
+        [value]="inputeDateField"
+      />
+      <input
+        type="text"
+        placeholder="Description"
+        #inputText
+        (input)="addInputText(inputText.value)"
+        [value]="inputTextField"
+      />
+      <br />
+      <button (click)="AddNotes()">Add</button>
+    </div>
+  </div>
+</div>
